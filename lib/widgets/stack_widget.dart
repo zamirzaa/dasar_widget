@@ -121,7 +121,7 @@ class StackWidget extends StatelessWidget {
 
               const SizedBox(height: 20),
 
-              // 4. Stack untuk Teks di Atas Gambar
+             // 4. Stack untuk Teks di Atas Gambar
               Row(
                 children: const [
                   CircleAvatar(child: Text('4')),
@@ -139,11 +139,11 @@ class StackWidget extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 50, right: 0),
                 child: Stack(
                   children: [
-                    Container(
+                    Image.asset(
+                      'images/mall.jpg',
                       width: 300,
                       height: 180,
-                      color: Colors.grey.shade300,
-                      child: const Icon(Icons.image, size: 80, color: Colors.grey),
+                      fit: BoxFit.cover,
                     ),
                     const Positioned(
                       right: 10,
@@ -152,8 +152,32 @@ class StackWidget extends StatelessWidget {
                         'Jelajahi Mall Terbaik',
                         textAlign: TextAlign.right,
                         style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
+                          color: Colors.white,
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    const Positioned(
+                      right: 10,
+                      bottom: 35,
+                      child: Text(
+                        'Suasana belanja yang nyaman dan menyenangkan',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    const Positioned(
+                      right: 10,
+                      bottom: 20,
+                      child: Text(
+                        'menanti Anda di mall terbaik.',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -161,8 +185,6 @@ class StackWidget extends StatelessWidget {
                   ],
                 ),
               ),
-
-              const SizedBox(height: 20),
 
               // 5. Stack dengan Ikon di atas Container
               Row(
