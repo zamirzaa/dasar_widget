@@ -9,10 +9,7 @@ class ExpandedWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text(
-            'Belajar Expanded',
-            style: TextStyle(color: Colors.white),
-          ),
+          title: const Text('Belajar Expanded', style: TextStyle(color: Colors.white)),
           backgroundColor: Colors.purpleAccent,
         ),
         body: SingleChildScrollView(
@@ -21,284 +18,126 @@ class ExpandedWidget extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                // 1. Konsep Dasar Expanded
                 Row(
                   children: [
-                    CircleAvatar(
-                      backgroundColor: Colors.purple,
-                      child: Text('1', style: TextStyle(color: Colors.yellow)),
-                    ),
+                    CircleAvatar(backgroundColor: Colors.purple, child: Text('1', style: TextStyle(color: Colors.yellow))),
                     SizedBox(width: 10),
-                    Text(
-                      'Konsep Dasar Expanded (Di dalam Row)',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+                    Text('Konsep Dasar Expanded (Di dalam Row)', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
                   ],
                 ),
                 SizedBox(height: 10),
                 Padding(
-                  padding: const EdgeInsets.only(left: 50, right: 10.0),
-                  child: Text(
-                    'Tanpa Expanded (height: 50, width: 50)',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                  ),
+                  padding: const EdgeInsets.only(left: 40),
+                  child: Text('Tanpa Expanded (height: 50, width: 50)', style: TextStyle(fontWeight: FontWeight.bold)),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 8),
                 Padding(
-                  padding: const EdgeInsets.only(left: 50, right: 10.0),
+                  padding: const EdgeInsets.only(left: 40),
                   child: Row(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(right: 3.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Colors.blue,
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          height: 50,
-                          width: 50,
-                          child: const Center(
-                            child: Text(
-                              'A',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 16,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 3.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          height: 50,
-                          width: 50,
-                          child: const Center(
-                            child: Text(
-                              'B',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 16,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 3.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Colors.orange,
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          height: 50,
-                          width: 50,
-                          child: const Center(
-                            child: Text(
-                              'C',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 16,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
+                      Container(decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(4)), height: 50, width: 50, child: Center(child: Text('A', style: TextStyle(fontWeight: FontWeight.bold)))),
+                      SizedBox(width: 3),
+                      Container(decoration: BoxDecoration(color: Colors.green, borderRadius: BorderRadius.circular(4)), height: 50, width: 50, child: Center(child: Text('B', style: TextStyle(fontWeight: FontWeight.bold)))),
+                      SizedBox(width: 3),
+                      Container(decoration: BoxDecoration(color: Colors.orange, borderRadius: BorderRadius.circular(4)), height: 50, width: 50, child: Center(child: Text('C', style: TextStyle(fontWeight: FontWeight.bold)))),
                     ],
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 15),
                 Padding(
-                  padding: const EdgeInsets.only(left: 50, right: 10.0),
-                  child: Text(
-                    'Dengan Expanded (height: 50, width: 50)',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                  ),
+                  padding: const EdgeInsets.only(left: 40),
+                  child: Text('Dengan Expanded (height: 50, width: 50)', style: TextStyle(fontWeight: FontWeight.bold)),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 8),
                 Padding(
-                  padding: const EdgeInsets.only(left: 50, right: 10.0),
+                  padding: const EdgeInsets.only(left: 40),
                   child: Row(
                     children: [
-                      Expanded(
-                        child: Padding(
-                          padding: const EdgeInsets.only(right: 3.0),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.blue,
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            height: 50,
-                            width: 50,
-                            child: const Center(
-                              child: Text(
-                                'A',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        child: Padding(
-                          padding: const EdgeInsets.only(right: 3.0),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.green,
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            height: 50,
-                            width: 50,
-                            child: const Center(
-                              child: Text(
-                                'B',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        child: Padding(
-                          padding: const EdgeInsets.only(right: 3.0),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.orange,
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            height: 50,
-                            width: 50,
-                            child: const Center(
-                              child: Text(
-                                'C',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
+                      Expanded(child: Container(decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(4)), height: 50, width: 50, child: Center(child: Text('A', style: TextStyle(fontWeight: FontWeight.bold))))),
+                      SizedBox(width: 3),
+                      Expanded(child: Container(decoration: BoxDecoration(color: Colors.green, borderRadius: BorderRadius.circular(4)), height: 50, width: 50, child: Center(child: Text('B', style: TextStyle(fontWeight: FontWeight.bold))))),
+                      SizedBox(width: 3),
+                      Expanded(child: Container(decoration: BoxDecoration(color: Colors.orange, borderRadius: BorderRadius.circular(4)), height: 50, width: 50, child: Center(child: Text('C', style: TextStyle(fontWeight: FontWeight.bold))))),
                     ],
                   ),
                 ),
-                SizedBox(height: 20),
+
+                SizedBox(height: 25),
+
+                // 2. Mengatur perbandingan ukuran menggunakan flex
                 Row(
                   children: [
-                    CircleAvatar(
-                      backgroundColor: Colors.purple,
-                      child: Text('2', style: TextStyle(color: Colors.yellow)),
-                    ),
+                    CircleAvatar(backgroundColor: Colors.purple, child: Text('2', style: TextStyle(color: Colors.yellow))),
                     SizedBox(width: 10),
-                    Expanded(
-                      child: Text(
-                        'Mengatur perbandingan ukuran menggunakan flex (height: 50, width: 50)',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
+                    Expanded(child: Text('Mengatur perbandingan ukuran menggunakan flex (height: 50, width: 50)', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold))),
                   ],
                 ),
                 SizedBox(height: 10),
                 Padding(
-                  padding: const EdgeInsets.only(left: 50, right: 10.0),
+                  padding: const EdgeInsets.only(left: 40),
+                  child: Row(
+                    children: [
+                      Expanded(flex: 1, child: Container(decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(4)), height: 50, width: 50, child: Center(child: Text('F1', style: TextStyle(fontWeight: FontWeight.bold))))),
+                      SizedBox(width: 3),
+                      Expanded(flex: 2, child: Container(decoration: BoxDecoration(color: Colors.green, borderRadius: BorderRadius.circular(4)), height: 50, width: 50, child: Center(child: Text('F2', style: TextStyle(fontWeight: FontWeight.bold))))),
+                      SizedBox(width: 3),
+                      Expanded(flex: 3, child: Container(decoration: BoxDecoration(color: Colors.orange, borderRadius: BorderRadius.circular(4)), height: 50, width: 50, child: Center(child: Text('F3', style: TextStyle(fontWeight: FontWeight.bold))))),
+                    ],
+                  ),
+                ),
+
+                SizedBox(height: 25),
+
+                // 3. Perbedaan Expanded dan Flexible
+                Row(
+                  children: [
+                    CircleAvatar(backgroundColor: Colors.purple, child: Text('3', style: TextStyle(color: Colors.yellow))),
+                    SizedBox(width: 10),
+                    Expanded(child: Text('Perbedaan Expanded dan Flexible (height: 50, width: 50)', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold))),
+                  ],
+                ),
+                SizedBox(height: 10),
+                Padding(
+                  padding: const EdgeInsets.only(left: 40),
                   child: Row(
                     children: [
                       Expanded(
-                        flex: 1,
-                        child: Padding(
-                          padding: const EdgeInsets.only(right: 3.0),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.blue,
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            height: 50,
-                            width: 50,
-                            child: const Center(
-                              child: Text(
-                                'F1',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                ),
-                              ),
-                            ),
-                          ),
+                        child: Container(
+                          decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(4)),
+                          height: 50,
+                          width: 50,
+                          child: Center(child: Text('E', style: TextStyle(fontWeight: FontWeight.bold))),
                         ),
                       ),
-                      Expanded(
-                        flex: 2,
-                        child: Padding(
-                          padding: const EdgeInsets.only(right: 3.0),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.green,
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            height: 50,
-                            width: 50,
-                            child: const Center(
-                              child: Text(
-                                'F2',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                ),
-                              ),
-                            ),
-                          ),
+                      SizedBox(width: 3),
+                      Flexible(
+                        child: Container(
+                          decoration: BoxDecoration(color: Colors.green, borderRadius: BorderRadius.circular(4)),
+                          height: 50,
+                          width: 50,
+                          child: Center(child: Text('F1', style: TextStyle(fontWeight: FontWeight.bold))),
                         ),
                       ),
-                      Expanded(
-                        flex: 3,
-                        child: Padding(
-                          padding: const EdgeInsets.only(right: 3.0),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.orange,
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            height: 50,
-                            width: 50,
-                            child: const Center(
-                              child: Text(
-                                'F3',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                ),
-                              ),
-                            ),
-                          ),
+                      SizedBox(width: 3),
+                      Flexible(
+                        child: Container(
+                          decoration: BoxDecoration(color: Colors.orange, borderRadius: BorderRadius.circular(4)),
+                          height: 50,
+                          width: 50,
+                          child: Center(child: Text('F2', style: TextStyle(fontWeight: FontWeight.bold))),
                         ),
                       ),
                     ],
                   ),
                 ),
+                SizedBox(height: 50),
               ],
             ),
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
+          onPressed: () => Navigator.pop(context),
           backgroundColor: Colors.purpleAccent,
           child: Icon(Icons.arrow_back, color: Colors.white),
         ),
