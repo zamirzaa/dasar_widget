@@ -21,7 +21,7 @@ class Tugas1Layout extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                'Buatlah layout widget sebagai berikut:',
+                'Buatlah layout widget sebagai berikut:', 
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 20),

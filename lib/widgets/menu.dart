@@ -11,6 +11,9 @@ import 'package:dasar_widget/widgets/row_widget.dart';
 import 'package:dasar_widget/widgets/column_widget.dart';
 import 'package:dasar_widget/widgets/stack_widget.dart';
 import 'package:dasar_widget/widgets/tugas1_layout.dart'; // Import file Tugas 1
+import 'expanded_widget.dart';
+import 'flexible_widget.dart';
+import 'align_widget.dart';
 
 class MenuPage extends StatelessWidget {
   const MenuPage({super.key});
@@ -243,17 +246,32 @@ class MenuPage extends StatelessWidget {
                       child: const Text('Stack', style: TextStyle(color: Colors.white)),
                     ),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const ExpandedWidget()),
+                        );
+                      },
                       style: ElevatedButton.styleFrom(backgroundColor: Colors.purpleAccent),
                       child: const Text('Expanded', style: TextStyle(color: Colors.white)),
                     ),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const FlexibleWidget()),
+                        );
+                      },
                       style: ElevatedButton.styleFrom(backgroundColor: Colors.purpleAccent),
                       child: const Text('Flexible', style: TextStyle(color: Colors.white)),
                     ),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const AlignWidget()),
+                        );
+                      },
                       style: ElevatedButton.styleFrom(backgroundColor: Colors.purpleAccent),
                       child: const Text('Align', style: TextStyle(color: Colors.white)),
                     ),
@@ -328,6 +346,7 @@ class MenuPage extends StatelessWidget {
               ),
               const SizedBox(height: 30),
             ],
+            
           ),
         ),
       ),
