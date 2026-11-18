@@ -11,6 +11,7 @@ import 'package:dasar_widget/widgets/row_widget.dart';
 import 'package:dasar_widget/widgets/column_widget.dart';
 import 'package:dasar_widget/widgets/stack_widget.dart';
 import 'package:dasar_widget/widgets/tugas1_layout.dart'; // Import file Tugas 1
+import 'package:dasar_widget/widgets/tugas2_layout.dart'; // Import file Tugas 2
 import 'expanded_widget.dart';
 import 'flexible_widget.dart';
 import 'align_widget.dart';
@@ -334,7 +335,12 @@ class MenuPage extends StatelessWidget {
                   ),
                   const SizedBox(width: 20),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Tugas2Layout()),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.amber,
                       foregroundColor: Colors.black,

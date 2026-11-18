@@ -230,7 +230,7 @@ class RowWidget extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [
-                  Text('Donianto', style: TextStyle(fontWeight: FontWeight.bold)),
+                  Text('Mirza', style: TextStyle(fontWeight: FontWeight.bold)),
                   Text('XII SIJA', style: TextStyle(color: Colors.grey, fontSize: 12)),
                 ],
               ),
