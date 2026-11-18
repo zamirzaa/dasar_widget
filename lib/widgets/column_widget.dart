@@ -605,7 +605,7 @@ class ColumnWidget extends StatelessWidget {
                     children: [
                       const CircleAvatar(
                         radius: 50,
-                        backgroundImage: AssetImage('/images/mirjaa'),
+                        backgroundImage: AssetImage('/images/mirjaa.png'),
                       ),
                       const SizedBox(height: 16),
                       const Text(
